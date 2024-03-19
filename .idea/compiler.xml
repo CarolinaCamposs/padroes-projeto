@@ -9,5 +9,8 @@
         <module name="padroescriacao" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="abstractfactory" target="19" />
+    </bytecodeTargetLevel>
   </component>
 </project>
