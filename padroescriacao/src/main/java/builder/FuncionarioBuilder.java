@@ -9,13 +9,13 @@ public class FuncionarioBuilder {
 
     public Funcionario build() {
         if (funcionario.getNome().equals("")) {
-            throw new IllegalArgumentException("Nome inválido");
+            throw new IllegalArgumentException("Nome não pode ser vazio");
         }
         if (funcionario.getCpf().equals("")) {
             throw new IllegalArgumentException("CPF inválido");
         }
         if (funcionario.getEmail().equals("")) {
-            throw new IllegalArgumentException("Email Inválido");
+            throw new IllegalArgumentException("E-mail inválido");
         }
         return funcionario;
     }
