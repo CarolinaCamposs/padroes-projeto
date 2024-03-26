@@ -1,4 +1,4 @@
-package abstractfactory2;
+package abstractfactory;
 
 public class FabricaCarro implements FabricaAbstrata {
     @Override

@@ -1,4 +1,4 @@
-package abstractfactory2;
+package abstractfactory;
 
 import org.junit.jupiter.api.Test;
 

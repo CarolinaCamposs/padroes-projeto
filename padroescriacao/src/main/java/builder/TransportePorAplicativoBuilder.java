@@ -1,4 +1,4 @@
-package Builder2;
+package builder;
 
 public class TransportePorAplicativoBuilder {
     private TransportePorAplicativo transportePorAplicativo;
