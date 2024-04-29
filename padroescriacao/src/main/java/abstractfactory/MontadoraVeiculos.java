@@ -1,7 +1,6 @@
 package abstractfactory;
 
 public class MontadoraVeiculos {
-
     private Veiculo veiculo;
     private NotaFiscal notaFiscal;
 
@@ -18,3 +17,4 @@ public class MontadoraVeiculos {
         return this.notaFiscal.emitir();
     }
 }
+

@@ -7,28 +7,6 @@ import org.junit.jupiter.api.Test;
 public class TransportePorAplicativoBuilderTest {
 
     @Test
-    void deveRetornarExcecaoParaNomeMotoristaVazio() {
-        try {
-            TransportePorAplicativoBuilder transportePorAplicativoBuilder = new TransportePorAplicativoBuilder();
-            TransportePorAplicativo transportePorAplicativo = transportePorAplicativoBuilder
-                    .setNomeMotorista("")
-                    .setModeloCarro("Toyota Corolla")
-                    .setPlacaCarro("ABC1234")
-                    .setCidade("São Paulo")
-                    .setTarifaBase(5.0)
-                    .setTarifaPorKm(2.0)
-                    .setDisponivel(true)
-                    .setAvaliacaoMedia(4)
-                    .setNumeroTelefone("123456789")
-                    .setEmail("joao@example.com")
-                    .build();
-            fail();
-        } catch (IllegalArgumentException e) {
-            assertEquals("Nome do motorista não pode ser vazio", e.getMessage());
-        }
-    }
-
-    @Test
     void deveRetornarExcecaoParaEmailVazio() {
         try {
             TransportePorAplicativoBuilder transportePorAplicativoBuilder = new TransportePorAplicativoBuilder();
@@ -69,6 +47,27 @@ public class TransportePorAplicativoBuilderTest {
             fail();
         } catch (IllegalArgumentException e) {
             assertEquals("Placa do carro não pode ser vazia", e.getMessage());
+        }
+    }
+
+    @Test
+    void deveRetornarSucessoParaCadastroCompleto() {
+        try {
+            TransportePorAplicativoBuilder transportePorAplicativoBuilder = new TransportePorAplicativoBuilder();
+            TransportePorAplicativo transportePorAplicativo = transportePorAplicativoBuilder
+                    .setNomeMotorista("João")
+                    .setModeloCarro("Toyota Corolla")
+                    .setPlacaCarro("ABC1234")
+                    .setCidade("São Paulo")
+                    .setTarifaBase(5.0)
+                    .setTarifaPorKm(2.0)
+                    .setDisponivel(true)
+                    .setAvaliacaoMedia(4)
+                    .setNumeroTelefone("123456789")
+                    .setEmail("joao@example.com")
+                    .build();
+        } catch (IllegalArgumentException e) {
+            assertEquals("Cadastro completo", e.getMessage());
         }
     }
 }
