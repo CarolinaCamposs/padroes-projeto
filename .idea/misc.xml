@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/padroescriacao/pom.xml" />
         <option value="$PROJECT_DIR$/padroesestruturais/pom.xml" />
+        <option value="$PROJECT_DIR$/padroescomportamentais/pom.xml" />
       </list>
     </option>
   </component>
