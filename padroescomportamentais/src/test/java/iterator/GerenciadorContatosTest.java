@@ -27,5 +27,4 @@ class GerenciadorContatosTest {
         );
         assertEquals(4, GerenciadorContatos.constarTotalContatosAgenda(agenda));
     }
-
 }
