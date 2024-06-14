@@ -26,14 +26,14 @@ class ElevadorTest {
     public void deveSubirElevadorParado() {
         elevador.setEstado(ElevadorEstadoParado.getInstance());
         assertTrue(elevador.subir());
-        assertEquals(ElevadorEstadoSubir.getInstance(), elevador.getEstado());
+        assertEquals(ElevadorEstadoSubindo.getInstance(), elevador.getEstado());
     }
 
     @Test
     public void deveDescerElevadorParado() {
         elevador.setEstado(ElevadorEstadoParado.getInstance());
         assertTrue(elevador.descer());
-        assertEquals(ElevadorEstadoDescer.getInstance(), elevador.getEstado());
+        assertEquals(ElevadorEstadoDescendo.getInstance(), elevador.getEstado());
     }
 
     @Test
@@ -54,32 +54,32 @@ class ElevadorTest {
 
     @Test
     public void naoDeveDescerElevadorDescendo() {
-        elevador.setEstado(ElevadorEstadoDescer.getInstance());
+        elevador.setEstado(ElevadorEstadoDescendo.getInstance());
         assertFalse(elevador.descer());
     }
     @Test
     public void devePararElevadorDescendo() {
-        elevador.setEstado(ElevadorEstadoDescer.getInstance());
+        elevador.setEstado(ElevadorEstadoDescendo.getInstance());
         assertTrue(elevador.parar());
         assertEquals(ElevadorEstadoParado.getInstance(), elevador.getEstado());
     }
 
     @Test
     public void deveSubirElevadorDescendo() {
-        elevador.setEstado(ElevadorEstadoDescer.getInstance());
+        elevador.setEstado(ElevadorEstadoDescendo.getInstance());
         assertTrue(elevador.subir());
-        assertEquals(ElevadorEstadoSubir.getInstance(), elevador.getEstado());
+        assertEquals(ElevadorEstadoSubindo.getInstance(), elevador.getEstado());
     }
 
     @Test
     public void naoDeveAbrirPortaElevadorDescendo() {
-        elevador.setEstado(ElevadorEstadoDescer.getInstance());
+        elevador.setEstado(ElevadorEstadoDescendo.getInstance());
         assertFalse(elevador.abrirPorta());
     }
 
     @Test
     public void naoDeveFecharPortaElevadorDescendo() {
-        elevador.setEstado(ElevadorEstadoDescer.getInstance());
+        elevador.setEstado(ElevadorEstadoDescendo.getInstance());
         assertFalse(elevador.fecharPorta());
     }
 
@@ -87,33 +87,33 @@ class ElevadorTest {
 
     @Test
     public void naoDeveSubirElevadorSubindo() {
-        elevador.setEstado(ElevadorEstadoSubir.getInstance());
+        elevador.setEstado(ElevadorEstadoSubindo.getInstance());
         assertFalse(elevador.subir());
     }
 
     @Test
     public void devePararElevadorSubindo() {
-        elevador.setEstado(ElevadorEstadoSubir.getInstance());
+        elevador.setEstado(ElevadorEstadoSubindo.getInstance());
         assertTrue(elevador.parar());
         assertEquals(ElevadorEstadoParado.getInstance(), elevador.getEstado());
     }
 
     @Test
     public void deveDescerElevadorSubindo() {
-        elevador.setEstado(ElevadorEstadoSubir.getInstance());
+        elevador.setEstado(ElevadorEstadoSubindo.getInstance());
         assertTrue(elevador.descer());
-        assertEquals(ElevadorEstadoDescer.getInstance(), elevador.getEstado());
+        assertEquals(ElevadorEstadoDescendo.getInstance(), elevador.getEstado());
     }
 
     @Test
     public void naoDeveAbrirPortaElevadorSubindo() {
-        elevador.setEstado(ElevadorEstadoSubir.getInstance());
+        elevador.setEstado(ElevadorEstadoSubindo.getInstance());
         assertFalse(elevador.abrirPorta());
     }
 
     @Test
     public void naoDeveFecharPortaElevadorSubindo() {
-        elevador.setEstado(ElevadorEstadoSubir.getInstance());
+        elevador.setEstado(ElevadorEstadoSubindo.getInstance());
         assertFalse(elevador.fecharPorta());
     }
 
@@ -163,14 +163,14 @@ class ElevadorTest {
     public void deveSubirElevadorPortaFechada() {
         elevador.setEstado(ElevadorEstadoPortaFechada.getInstance());
         assertTrue(elevador.subir());
-        assertEquals(ElevadorEstadoSubir.getInstance(), elevador.getEstado());
+        assertEquals(ElevadorEstadoSubindo.getInstance(), elevador.getEstado());
     }
 
     @Test
     public void deveDescerElevadorPortaFechada() {
         elevador.setEstado(ElevadorEstadoPortaFechada.getInstance());
         assertTrue(elevador.descer());
-        assertEquals(ElevadorEstadoDescer.getInstance(), elevador.getEstado());
+        assertEquals(ElevadorEstadoDescendo.getInstance(), elevador.getEstado());
     }
 
     @Test
