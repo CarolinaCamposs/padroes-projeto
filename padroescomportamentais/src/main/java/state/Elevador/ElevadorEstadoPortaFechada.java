@@ -13,12 +13,12 @@ public class ElevadorEstadoPortaFechada extends ElevadorEstado{
     }
 
     public boolean subir(Elevador elevador) {
-        elevador.setEstado(ElevadorEstadoSubir.getInstance());
+        elevador.setEstado(ElevadorEstadoSubindo.getInstance());
         return true;
     }
 
     public boolean descer(Elevador elevador) {
-        elevador.setEstado(ElevadorEstadoDescer.getInstance());
+        elevador.setEstado(ElevadorEstadoDescendo.getInstance());
         return true;
     }
 
