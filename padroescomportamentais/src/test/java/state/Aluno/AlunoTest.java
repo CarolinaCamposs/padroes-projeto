@@ -1,6 +1,7 @@
-package state;
+package state.Aluno;
 
 import org.junit.jupiter.api.Test;
+import state.Aluno.Aluno;
 
 import static org.junit.jupiter.api.Assertions.*;
 

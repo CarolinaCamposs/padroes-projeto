@@ -1,4 +1,4 @@
-package state;
+package state.Aluno;
 
 public class Aluno {
 
